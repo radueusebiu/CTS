@@ -1,5 +1,7 @@
 package ro.ase.cts.clase;
 
+import java.util.Arrays;
+
 public abstract class Aplicant{
 	protected String nume;
 	protected String prenume;
@@ -59,8 +61,22 @@ public abstract class Aplicant{
 	public int getNr_proiecte() {
 		return nr_proiecte;
 	}
-	public void setNr_proiecte(int nr_proiecte) {
+	public void setDenumiriProiecte(String[] denumireProiect, int nr_proiecte) {
 		this.nr_proiecte = nr_proiecte;
+		this.denumireProiect = denumireProiect;
 	}
 
+
+	@Override
+	public String toString() {
+		final StringBuilder sb = new StringBuilder("Aplicant{");
+		sb.append("nume='").append(nume).append('\'');
+		sb.append(", prenume='").append(prenume).append('\'');
+		sb.append(", varsta=").append(varsta);
+		sb.append(", punctaj=").append(punctaj);
+		sb.append(", nr_proiecte=").append(nr_proiecte);
+		sb.append(", denumireProiect=").append(Arrays.toString(denumireProiect));
+		sb.append('}');
+		return sb.toString();
+	}
 }

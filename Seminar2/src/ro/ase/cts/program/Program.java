@@ -4,6 +4,7 @@ import ro.ase.cts.clase.Angajat;
 import ro.ase.cts.clase.Aplicant;
 import ro.ase.cts.reader.ReaderAngajati;
 import ro.ase.cts.reader.ReaderAplicant;
+import ro.ase.cts.reader.ReaderElevi;
 import ro.ase.cts.reader.ReaderStudent;
 
 import java.io.FileNotFoundException;

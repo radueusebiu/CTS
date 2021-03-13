@@ -9,7 +9,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class ReaderStudent implements ReaderAplicant{
+public class ReaderStudent extends ReaderAplicant{
+    public ReaderStudent(String numeFisier) {
+        super(numeFisier);
+    }
     //    public static List<Aplicant> readStudents(String file) throws FileNotFoundException, NumberFormatException {
 //        Scanner input = new Scanner(new File(file));
 //        input.useDelimiter(",|\n");
@@ -34,8 +37,8 @@ public class ReaderStudent implements ReaderAplicant{
 //    }
 
     @Override
-    public List<Aplicant> readAplicants(String file) throws FileNotFoundException {
-        Scanner input = new Scanner(new File(file));
+    public List<Aplicant> readAplicants() throws FileNotFoundException {
+        Scanner input = new Scanner(new File(super.numeFisier));
         input.useDelimiter(",|\n");
         List<Aplicant> studenti = new ArrayList<Aplicant>();
 

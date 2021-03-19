@@ -2,6 +2,7 @@ package ro.ase.cts.program;
 
 import ro.ase.cts.clase.Angajat;
 import ro.ase.cts.clase.Aplicant;
+import ro.ase.cts.clase.Proiect;
 import ro.ase.cts.reader.ReaderAngajati;
 import ro.ase.cts.reader.ReaderAplicant;
 import ro.ase.cts.reader.ReaderElevi;

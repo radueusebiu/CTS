@@ -54,9 +54,9 @@ public class Student {
     public boolean areRestante() {
         for(int nota:note) {
             if(nota<5) {
-                return false;
+                return true;
             }
         }
-        return true;
+        return false;
     }
 }

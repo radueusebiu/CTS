@@ -2,11 +2,14 @@ package tests;
 
 import clase.Grupa;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
+import testsSuite.categorii.TesteUrgente;
 
 import static org.junit.Assert.*;
 
 public class GrupaTest {
     @Test
+    @Category(TesteUrgente.class)
     public void testRight(){
         Grupa grupa = new Grupa(1085);
 
@@ -14,6 +17,7 @@ public class GrupaTest {
     }
 
     @Test
+    @Category(TesteUrgente.class)
     public void testBoundaryLimitaInferioara(){
         Grupa grupa = new Grupa(1000);
         assertEquals(1000,grupa.getNrGrupa());
@@ -45,6 +49,5 @@ public class GrupaTest {
         Grupa grupa = new Grupa(1085);
         assertNotNull(grupa.getStudenti());
     }
-
 
 }

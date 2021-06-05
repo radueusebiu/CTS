@@ -5,9 +5,12 @@ import clase.Student;
 import dubluri.StudentDummy;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
+import testsSuite.categorii.TestePromovabilitateCategory;
+import testsSuite.categorii.TesteUrgente;
 
 import static org.junit.Assert.*;
-
+@Category(TestePromovabilitateCategory.class)
 public class TestGetPromovabilitateGrupa {
 
     @Test
@@ -27,7 +30,9 @@ public class TestGetPromovabilitateGrupa {
         }
         assertEquals(0.7,grupa.getPromovabilitate(),0.01);
     }
+
     @Test
+    @Category(TesteUrgente.class)
     public void testGetPromovabilitateLowerBound() {
         Grupa grupa = new Grupa(1085);
         for(int i=0;i<6;i++) {
